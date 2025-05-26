@@ -146,7 +146,7 @@ nav .right li:last-child a{
   margin-bottom: 5px;
 }
 
-/* Projects and Certifications */
+/* Section 3 Projects*/
 #projects, #certifications {
   padding: 60px 50px;
   display: flex;
@@ -163,19 +163,29 @@ nav .right li:last-child a{
 }
 
 .box {
-  flex: 1 1 calc(33.333% - 20px);
+  display: flex;
+  flex-direction: column; /* Stack image and text vertically */
+  align-items: center;     /* Center contents horizontally */
+  text-align: center;      /* Center text */
   border: 2px solid var(--link-color);
   border-radius: 10px;
   padding: 20px;
-  margin-bottom: 20px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   background-color: var(--background-color);
-  transition: transform 0.2s ease;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   color: var(--text-color);
+  transition: transform 0.2s ease;
+  overflow: hidden;
 }
 
 .box:hover {
   transform: scale(1.02);
+}
+
+.box img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 
 .box h3 {
@@ -186,8 +196,27 @@ nav .right li:last-child a{
 
 .box p {
   font-size: 15px;
+  margin: 0;
   color: var(--text-color);
 }
+
+.column { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+   gap: 20px;
+   }
+
+/* section 4 Certifications */
+
+.column-certifications { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Smaller box width */
+  gap: 20px;
+  padding: 20px;
+}
+
+
+
 
 /* Contact Section */
 #contact {
@@ -240,11 +269,7 @@ hr {
 }
 
 @media(max-width: 650px){
-  /* Navbar */
-  nav {
-    padding: 0 20px;
-  }
-
+  
   /*Hero section*/
   .herosection .text {
     font-size: 35px;
@@ -252,7 +277,7 @@ hr {
 
   .hero-section {
     flex-direction: column-reverse;
-    padding: 0 20px;
+    
   }
 
   .hero-section .headshot {
