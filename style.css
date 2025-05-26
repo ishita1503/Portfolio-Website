@@ -257,10 +257,29 @@ hr {
   ul {
     display: none;
   }
+  nav {
+    padding: 0 20px
+  }
+
+  .hero-section {
+    padding: 0 20px
+  }
+
+  #about {
+    padding: 0 20px
+  }
 
   /* Projects & Certifications layout to single column */
   #projects, #certifications {
     flex-direction: column;
+    padding: 0 10px;
+  }
+  .box {
+     width: 100%; max-width: 400px;
+     }
+
+  #contact {
+    padding: 0 20px;
   }
 
   .box {
