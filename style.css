@@ -200,6 +200,11 @@ nav .right li:last-child a {
   transform: scale(1.02);
 }
 
+.box img {
+  width: 100%;
+  height: auto;
+  padding: 0 15px;
+}
 
 
 .box h3 {
